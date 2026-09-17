@@ -46,5 +46,8 @@
     "dazl-projects/**",
     "dazl-templates/**"
   ],
-  "visualEditing": "enabled"
+  "visualEditing": "enabled",
+  "pages": {
+    "enabled": true
+  }
 }
