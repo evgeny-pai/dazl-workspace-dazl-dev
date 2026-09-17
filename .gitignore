@@ -1,3 +1,14 @@
+# --- dazl-in-dazl (volatile, rebuilt by dazl/scripts/dazl-in-dazl/install.mjs) ---
+/dazl-setup/api-server/.local-pg/
+/dazl-setup/**/*.log
+/dazl-setup/**/*.pid
+/dazl-setup/root/install-status.json
+/dazl-setup/root/install-attempts.json
+/dazl-setup/root/install-settings.json
+/dazl-projects/
+/dazl-templates/
+*.log
+
 # --- dazl session rules (managed by the engine; keep last) ---
 /.home/
 /.dazl/

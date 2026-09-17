@@ -3,7 +3,9 @@
   "apps": {
     "dazl": {
       "resolveFrom": "dazl",
-      "devServer": "auto"
+      "devServer": "auto",
+      "hooksFile": "dazl-setup/dazl/dazl.hooks.ts",
+      "hookReadyTimeoutMs": 600000
     }
   }
 }
