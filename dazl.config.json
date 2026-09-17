@@ -6,6 +6,45 @@
       "devServer": "auto",
       "hooksFile": "dazl-setup/dazl/dazl.hooks.ts",
       "hookReadyTimeoutMs": 600000
+    },
+    "root": {
+      "resolveFrom": ".",
+      "devServer": "auto"
     }
-  }
+  },
+  "primaryApp": "dazl",
+  "fileNamingConvention": "kebab-case",
+  "classNamesUtilityFunction": {
+    "classnamesPath": "classnames",
+    "classnamesTarget": "default",
+    "importedAs": "classNames"
+  },
+  "ignoredSubPaths": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/dist-engine/**",
+    "**/build/**",
+    "**/out/**",
+    "**/.react-router/**",
+    "**/.next/**",
+    "**/.netlify/**",
+    "**/.cache/**",
+    "**/.vite/**",
+    "**/.turbo/**",
+    "**/.parcel-cache/**",
+    "**/coverage/**",
+    "**/go-build/**",
+    "**/.gocache/**",
+    "**/.gomodcache/**",
+    "**/.local-pg/**",
+    "**/pgdata/**",
+    "**/.git/**",
+    "**/.dazl/**",
+    "**/.vscode/**",
+    "**/.idea/**",
+    ".home/**",
+    "dazl-projects/**",
+    "dazl-templates/**"
+  ],
+  "visualEditing": "enabled"
 }
