@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "apps": {
+    "dazl": {
+      "resolveFrom": "dazl",
+      "devServer": "auto"
+    }
+  }
+}

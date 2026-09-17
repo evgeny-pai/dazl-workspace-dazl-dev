@@ -1,0 +1,7 @@
+# --- dazl session rules (managed by the engine; keep last) ---
+/.home/
+/.dazl/
+node_modules/
+/build/
+/.netlify/
+# --- end dazl session rules ---

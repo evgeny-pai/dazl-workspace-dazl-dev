@@ -1,0 +1,6 @@
+[submodule "api-server"]
+	path = api-server
+	url = https://github.com/dazl-dev/api-server
+[submodule "dazl"]
+	path = dazl
+	url = https://github.com/dazl-dev/dazl
