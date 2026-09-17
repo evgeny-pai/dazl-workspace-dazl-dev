@@ -49,5 +49,8 @@
   "visualEditing": "enabled",
   "pages": {
     "enabled": true
+  },
+  "imageReference": {
+    "mode": "src"
   }
 }
