@@ -1,6 +1,8 @@
 [submodule "api-server"]
 	path = api-server
 	url = https://github.com/dazl-dev/api-server
+	branch = next
 [submodule "dazl"]
 	path = dazl
 	url = https://github.com/dazl-dev/dazl
+	branch = next
