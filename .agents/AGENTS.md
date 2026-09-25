@@ -7,7 +7,7 @@ outside them — this file, the configuration, the setup tree — belongs to the
 repository itself. Run `git submodule status` to see which of them the session repo tracks:
 a repository with no commit yet is deliberately left untracked until it has one.
 
-- **Workspace repository:** `https://github.com/evgeny-pai/dazl-workspace-dazl-dev.git`
+- **Workspace repository:** `https://github.com/evgeny-pai/dazl-workspace-dazl-dev`
 - **Configuration:** `dazl.config.json` at the workspace root — every path in it is relative to that root.
 - **Primary app:** `dazl/`
 

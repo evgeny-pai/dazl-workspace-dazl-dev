@@ -22,5 +22,17 @@ export default async (env) => {
   const userPlugins =
     userConfig.plugins === undefined ? [] : Array.isArray(userConfig.plugins) ? userConfig.plugins : [userConfig.plugins];
   const plugins = await dazlPlugins({ viteVersion, previewScriptUrl: process.env.DAZL_PREVIEW_SCRIPT_URL });
-  return { ...userConfig, plugins: [...userPlugins, ...plugins] };
+  const config = { ...userConfig, plugins: [...userPlugins, ...plugins] };
+  // Dazl's preview proxy owns the public port, so this server's port is private and is pinned here
+  // too, not only via the CLI --port flag - this wrapper is what a repo's own vite config passes
+  // through last, so the CLI flag alone could still be undone by userConfig.server.port above. Set
+  // only when Dazl launched this dev server itself: a startDev hook never gets this env var, so
+  // this block no-ops for one and the port the hook reported back to Dazl stands unchanged.
+  // strictPort is forced off so a repo that set it auto-increments off a busy port instead of
+  // turning a second local editor into a hard EADDRINUSE exit.
+  const dazlPort = Number(process.env.DAZL_DEV_SERVER_PORT);
+  if (Number.isInteger(dazlPort) && dazlPort > 0) {
+    config.server = { ...userConfig.server, port: dazlPort, strictPort: false };
+  }
+  return config;
 };
